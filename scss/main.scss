@@ -612,7 +612,6 @@ header {
 
 .tools {
   @include flexitems(center, center);
-  // background-color: salmon;
   margin-top: 5rem;
 
   .main-text {
@@ -630,6 +629,7 @@ header {
     }
 
     p {
+      margin-top: 2rem;
       font-size: 1.2em;
       color: #696984;
       font-weight: 400;
@@ -637,7 +637,36 @@ header {
   }
 }
 
+.assesments {
+  @include flexitems(center, center);
+  margin-top: 5rem;
 
+  .main-img {
+    margin-left: 5rem;
+  }
+
+  .main-text {
+    padding-left: 5rem;
+    padding-right: 10rem;
+    h4 {
+      font-size: 2.2em;
+      color: $primary-colorBlue;
+      font-weight: 600;
+      padding-right: 10rem;
+
+      span {
+        color: $secondary-colorOrange;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.2em;
+      color: #696984;
+      font-weight: 400;
+    }
+  }
+}
 
 @media (max-width: 576px) {
   nav .logo {
