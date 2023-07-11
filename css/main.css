@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,12 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none !important;
 }
 
 @keyframes slider {
@@ -32,6 +38,9 @@ body {
     display: none;
     opacity: 0;
   }
+}
+header {
+  margin-bottom: 100vh;
 }
 header nav {
   margin: 20px 20px;
@@ -75,6 +84,7 @@ header nav ul li button {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), -1px -1px 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s;
+  font-weight: 500;
 }
 header nav ul li button.login {
   color: #6c6c6c;
@@ -121,6 +131,7 @@ header .header .container-header {
 }
 header .header .container-header h3 {
   font-size: 3.4em;
+  font-weight: 700;
   color: #2f327d;
 }
 header .header .container-header h3 span {
@@ -129,6 +140,8 @@ header .header .container-header h3 span {
 header .header .container-header p {
   font-size: 1.2em;
   color: #464644;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
 }
 header .header .container-header button {
   width: 160px;
@@ -140,6 +153,7 @@ header .header .container-header button {
   color: white;
   height: 50px;
   border-radius: 30px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -148,10 +162,92 @@ header .header .container-header button:hover {
   background-color: #c26f05;
 }
 header .header .container-person {
-  margin-top: 5rem;
+  position: relative;
+  z-index: -999;
+  margin-top: 4.4rem;
 }
 header .header .container-person img {
   height: 750px;
+}
+
+.carrer {
+  width: 100%;
+  margin: 10px 20px;
+  text-align: center;
+}
+.carrer h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #696984;
+}
+.carrer .company {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 30px;
+}
+.carrer .company ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.carrer .company ul li .google path {
+  transition: 0.5s;
+}
+.carrer .company ul li .google:hover path:nth-child(1) {
+  fill: #4086f4;
+}
+.carrer .company ul li .google:hover path:nth-child(2) {
+  fill: #31aa52;
+}
+.carrer .company ul li .google:hover path:nth-child(3) {
+  fill: #eb4132;
+}
+.carrer .company ul li .google:hover path:nth-child(4) {
+  fill: #fbbd00;
+}
+.carrer .company ul li .google:hover path:nth-child(5) {
+  fill: #4086f4;
+}
+.carrer .company ul li .google:hover path:nth-child(6) {
+  fill: #eb4132;
+}
+.carrer .company ul li .netflix path {
+  transition: 0.5s;
+}
+.carrer .company ul li .netflix:hover path {
+  fill: #d70913;
+}
+.carrer .company ul li .airbnb path {
+  transition: 0.5s;
+}
+.carrer .company ul li .airbnb:hover path {
+  fill: #f2555a;
+}
+.carrer .company ul li .amazon path {
+  transition: 0.5s;
+}
+.carrer .company ul li .amazon:hover path:nth-child(1) {
+  fill: #f29100;
+}
+.carrer .company ul li .amazon:hover path:nth-child(2) {
+  fill: #f29100;
+}
+.carrer .company ul li .amazon:hover path:nth-child(3) {
+  fill: #201d1d;
+}
+.carrer .company ul li .facebook path {
+  transition: 0.5s;
+}
+.carrer .company ul li .facebook:hover path {
+  fill: #4462a1;
+}
+.carrer .company ul li .grab path {
+  transition: 0.5s;
+}
+.carrer .company ul li .grab:hover path {
+  fill: #00a84b;
 }
 
 @media (max-width: 576px) {

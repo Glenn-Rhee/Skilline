@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,12 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none !important;
 }
 
 $primary-colorBlue: #2f327d;
@@ -62,6 +69,7 @@ $third-colorLightBlue: #65daff;
 }
 
 header {
+  margin-bottom: 100vh;
   nav {
     margin: 20px 20px;
     background-color: transparent;
@@ -104,6 +112,7 @@ header {
             -1px -1px 1px rgba($color: #000000, $alpha: 0.1);
           cursor: pointer;
           transition: all 0.2s;
+          font-weight: 500;
 
           &.login {
             color: #6c6c6c;
@@ -159,6 +168,7 @@ header {
 
       h3 {
         font-size: 3.4em;
+        font-weight: 700;
         color: $primary-colorBlue;
         span {
           color: $secondary-colorOrange;
@@ -168,6 +178,8 @@ header {
       p {
         font-size: 1.2em;
         color: #464644;
+        font-weight: 400;
+        font-family: "Nunito Sans", sans-serif;
       }
 
       button {
@@ -176,24 +188,150 @@ header {
         color: white;
         height: 50px;
         border-radius: 30px;
+        font-weight: 600;
         cursor: pointer;
         transition: all 0.2s;
         box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.4),
           -1px -1px 1px rgba($color: #000000, $alpha: 0.1);
 
-          &:hover {
-            background-color: darken(
-                $color: $secondary-colorOrange,
-                $amount: 10%
-              );
-          }
+        &:hover {
+          background-color: darken(
+            $color: $secondary-colorOrange,
+            $amount: 10%
+          );
+        }
       }
     }
 
     .container-person {
-      margin-top: 5rem;
+      position: relative;
+      z-index: -999;
+      margin-top: 4.4rem;
       img {
         height: 750px;
+      }
+    }
+  }
+}
+
+// Carreers
+.carrer {
+  width: 100%;
+  margin: 10px 20px;
+  text-align: center;
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #696984;
+  }
+
+  .company {
+    @include flexitems(center, start);
+    margin-top: 30px;
+
+    ul {
+      @include flexitems(center, center);
+      gap: 70px;
+
+      li {
+        .google {
+          path {
+            transition: 0.5s;
+          }
+          &:hover {
+            path:nth-child(1) {
+              fill: #4086f4;
+            }
+
+            path:nth-child(2) {
+              fill: #31aa52;
+            }
+
+            path:nth-child(3) {
+              fill: #eb4132;
+            }
+
+            path:nth-child(4) {
+              fill: #fbbd00;
+            }
+
+            path:nth-child(5) {
+              fill: #4086f4;
+            }
+
+            path:nth-child(6) {
+              fill: #eb4132;
+            }
+          }
+        }
+
+        .netflix {
+          path {
+            transition: 0.5s;
+          }
+
+          &:hover {
+            path {
+              fill: #d70913;
+            }
+          }
+        }
+
+        .airbnb {
+          path {
+            transition: 0.5s;
+          }
+
+          &:hover {
+            path {
+              fill: #f2555a;
+            }
+          }
+        }
+
+        .amazon {
+          path {
+            transition: 0.5s;
+          }
+
+          &:hover {
+            path:nth-child(1) {
+              fill: #f29100;
+            }
+
+            path:nth-child(2) {
+              fill: #f29100;
+            }
+
+            path:nth-child(3) {
+              fill: #201d1d;
+            }
+          }
+        }
+
+        .facebook {
+          path {
+            transition: 0.5s;
+          }
+
+          &:hover {
+            path {
+              fill: #4462a1;
+            }
+          }
+        }
+        .grab {
+          path {
+            transition: 0.5s;
+          }
+
+          &:hover {
+            path {
+              fill: #00a84b;
+            }
+          }
+        }
       }
     }
   }
