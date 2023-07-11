@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+$primary-colorBlue: #2f327d;
+$secondary-colorOrange: #f48c06;
+$third-colorLightBlue: #65daff;
+
+@mixin templateAnimateSideBar($translate, $display, $opacity) {
+  transform: translateX($translate);
+  display: $display;
+  opacity: $opacity;
+}
+
+@mixin templateAnimasiName($nameAni) {
+  animation-name: $nameAni;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@mixin flexitems($justify: center, $align: start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin templateBtn($width) {
+  width: $width;
+  height: 40px;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+}
+
+@keyframes slider {
+  0% {
+    @include templateAnimateSideBar(150px, none, 0);
+  }
+
+  100% {
+    @include templateAnimateSideBar(0, flex, 1);
+  }
+}
+
+@keyframes closeSlider {
+  0% {
+    @include templateAnimateSideBar(0, flex, 1);
+  }
+
+  100% {
+    @include templateAnimateSideBar(150px, none, 0);
+  }
+}
+
+header {
+  nav {
+    margin: 20px 20px;
+    background-color: transparent;
+    padding: 10px 0;
+    color: #dfdfdf;
+    display: grid;
+    grid-template-columns: 1.2fr 5fr;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+
+    .logo {
+      margin-left: 4rem;
+    }
+
+    ul {
+      @include flexitems(space-around, center);
+      list-style: none;
+      margin: 0 4rem 0 10rem;
+      column-gap: 5px;
+      padding: 10px 4px;
+      // background-color: saddlebrown;
+
+      li {
+        a {
+          font-size: 1.1em;
+          text-decoration: none;
+          color: #252641;
+
+          &:hover {
+            color: $secondary-colorOrange;
+          }
+        }
+
+        button {
+          @include templateBtn(140px);
+          border-radius: 80px;
+          box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.4),
+            -1px -1px 1px rgba($color: #000000, $alpha: 0.1);
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &.login {
+            color: #6c6c6c;
+            background-color: white;
+
+            &:hover {
+              background-color: darken($color: white, $amount: 10%);
+            }
+          }
+
+          &.signup {
+            color: white;
+            background-color: $secondary-colorOrange;
+
+            &:hover {
+              background-color: darken(
+                $color: $secondary-colorOrange,
+                $amount: 10%
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    background-image: url(../assets/img/header/bg-header.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -5vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 2.4fr;
+    gap: 10px;
+
+    .container-header {
+      @include flexitems(start, start);
+      flex-direction: column;
+      margin-top: 5rem;
+      padding: 10rem 0;
+      margin-left: 4rem;
+      gap: 40px;
+
+      h3 {
+        font-size: 3.4em;
+        color: $primary-colorBlue;
+        span {
+          color: $secondary-colorOrange;
+        }
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #464644;
+      }
+
+      button {
+        @include templateBtn(160px);
+        background-color: $secondary-colorOrange;
+        color: white;
+        height: 50px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.4),
+          -1px -1px 1px rgba($color: #000000, $alpha: 0.1);
+
+          &:hover {
+            background-color: darken(
+                $color: $secondary-colorOrange,
+                $amount: 10%
+              );
+          }
+      }
+    }
+
+    .container-person {
+      margin-top: 5rem;
+      img {
+        height: 750px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  nav .logo {
+    font-size: 1.7em;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav .logo {
+    margin-left: 0;
+    margin-right: 10rem;
+    width: 200px;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    align-items: center;
+    width: 25%;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(199, 110, 26, 0.496);
+    z-index: -2;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  nav ul.slider {
+    animation-name: slider;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  nav ul.closeSlider {
+    animation-name: closeSlider;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  nav ul li a {
+    color: black;
+  }
+
+  nav .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  nav .menu-toggle span {
+    width: 40px;
+    background-color: rgb(195, 195, 194);
+    height: 5px;
+    transition: 0.5s;
+  }
+
+  .menu-toggle.trigger span:nth-child(1) {
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+  }
+
+  .menu-toggle.trigger span:nth-child(2) {
+    opacity: 0;
+    transition: 0.1s;
+  }
+
+  .menu-toggle.trigger span:last-child {
+    transform-origin: 0 100%;
+    transform: rotate(-44deg);
+    margin-top: 2px;
+  }
+}
