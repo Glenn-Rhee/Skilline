@@ -172,12 +172,12 @@ header .header .container-person img {
 
 .carrer {
   width: 100%;
-  margin: 10px 20px;
+  margin: 10px 0px;
   text-align: center;
 }
 .carrer h3 {
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 500;
   color: #696984;
 }
 .carrer .company {
@@ -248,6 +248,61 @@ header .header .container-person img {
 }
 .carrer .company ul li .grab:hover path {
   fill: #00a84b;
+}
+
+.all-in-one {
+  display: grid;
+  width: 100%;
+  margin: 15rem 0px;
+  grid-template-areas: "header header header" "billing schedule cust-track";
+  justify-content: center;
+  gap: 2px;
+  row-gap: 50px;
+}
+.all-in-one .header {
+  grid-area: header;
+  text-align: center;
+  padding: 10px 350px;
+}
+.all-in-one .header h3 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2f327d;
+}
+.all-in-one .header h3 span {
+  color: #f48c06;
+}
+.all-in-one .header p {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #696984;
+}
+.all-in-one .card {
+  text-align: center;
+  padding: 50px;
+}
+.all-in-one .card h4 {
+  font-size: 1.6em;
+  color: #2f327d;
+  font-weight: 500;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all-in-one .card p {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #696984;
+}
+.all-in-one .billing {
+  grid-area: billing;
+}
+.all-in-one .schedule {
+  grid-area: schedule;
+}
+.all-in-one .cust-track {
+  grid-area: cust-track;
 }
 
 @media (max-width: 576px) {

@@ -217,12 +217,12 @@ header {
 // Carreers
 .carrer {
   width: 100%;
-  margin: 10px 20px;
+  margin: 10px 0px;
   text-align: center;
 
   h3 {
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 500;
     color: #696984;
   }
 
@@ -321,6 +321,7 @@ header {
             }
           }
         }
+
         .grab {
           path {
             transition: 0.5s;
@@ -334,6 +335,70 @@ header {
         }
       }
     }
+  }
+}
+
+// All in one
+.all-in-one {
+  display: grid;
+  width: 100%;
+  margin: 15rem 0px;
+  grid-template-areas:
+    "header header header"
+    "billing schedule cust-track";
+  justify-content: center;
+  gap: 2px;
+  row-gap: 50px;
+
+  .header {
+    grid-area: header;
+    text-align: center;
+    padding: 10px 350px;
+    h3 {
+      font-size: 2em;
+      font-weight: 700;
+      color: $primary-colorBlue;
+
+      span {
+        color: $secondary-colorOrange;
+      }
+    }
+
+    p {
+      font-size: 1.3em;
+      font-weight: 400;
+      color: #696984;
+    }
+  }
+
+  .card {
+    text-align: center;
+    padding: 50px;
+    h4 {
+      font-size: 1.6em;
+      color: $primary-colorBlue;
+      font-weight: 500;
+      min-height: 100px;
+      @include flexitems(center, center)
+    }
+
+    p {
+      font-size: 1.1em;
+      font-weight: 400;
+      color: #696984;
+    }
+  }
+
+  .billing {
+    grid-area: billing;
+  }
+
+  .schedule {
+    grid-area: schedule;
+  }
+
+  .cust-track {
+    grid-area: cust-track;
   }
 }
 
