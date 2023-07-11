@@ -146,7 +146,7 @@ header {
     background-position-y: -5vh;
     background-repeat: no-repeat;
     position: absolute;
-    z-index: -3;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -348,7 +348,7 @@ header {
     "billing schedule cust-track";
   justify-content: center;
   gap: 2px;
-  row-gap: 50px;
+  row-gap: 0px;
 
   .header {
     grid-area: header;
@@ -379,7 +379,7 @@ header {
       color: $primary-colorBlue;
       font-weight: 500;
       min-height: 100px;
-      @include flexitems(center, center)
+      @include flexitems(center, center);
     }
 
     p {
@@ -400,6 +400,141 @@ header {
   .cust-track {
     grid-area: cust-track;
   }
+}
+
+// about us
+.about-us {
+  display: grid;
+  margin-bottom: 10rem;
+  width: 100%;
+  grid-template-areas:
+    "header header"
+    "instructions students";
+  justify-content: center;
+  text-align: center;
+
+  .header {
+    grid-area: header;
+    padding: 5px 7rem;
+    h3 {
+      color: $primary-colorBlue;
+      font-size: 2.4em;
+      font-weight: 600;
+
+      span {
+        color: $secondary-colorOrange;
+      }
+    }
+
+    p {
+      color: #696984;
+      font-weight: 400;
+      font-size: 1.3em;
+      margin-top: 20px;
+    }
+  }
+
+  .imgs {
+    position: relative;
+
+    .body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include flexitems(center, center);
+      flex-direction: column;
+
+      h4 {
+        color: white;
+        text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.5);
+        font-size: 1.7em;
+      }
+
+      button {
+        font-size: 1.2;
+        color: white;
+        text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.5);
+        @include templateBtn(200px);
+        border-radius: 30px;
+        height: 50px;
+        cursor: pointer;
+        transition: 0.2s;
+        padding: 0 10px;
+
+        &.instructions-btn {
+          background-color: transparent;
+          border: 1px solid white;
+
+          &:hover {
+            background-color: $third-colorLightBlue;
+            border: none;
+          }
+        }
+
+        &.student-btn {
+          background-color: $third-colorLightBlue;
+
+          &:hover {
+            background-color: darken(
+              $color: $third-colorLightBlue,
+              $amount: 10%
+            );
+          }
+        }
+      }
+    }
+  }
+
+  .instructions {
+    grid-area: instructions;
+  }
+
+  .for-student {
+    grid-area: students;
+  }
+}
+
+// Skill
+.skill {
+  // @include flexitems(center, center);
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+
+  .text {
+    padding: 10px 30px 10px 80px;
+
+    h3 {
+      color: $primary-colorBlue;
+      font-size: 2em;
+      font-weight: 500;
+
+      span {
+        color: $secondary-colorOrange;
+      }
+    }
+
+    p{
+      color: #696984;
+      font-size: 1.3em;
+      font-weight: 400;
+      margin: 25px 0;
+    }
+
+    a{
+      text-decoration: none;
+      color: #696984;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // padding: 10px 50px;
 }
 
 @media (max-width: 576px) {

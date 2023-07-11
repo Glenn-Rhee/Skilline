@@ -107,7 +107,7 @@ header .header {
   background-position-y: -5vh;
   background-repeat: no-repeat;
   position: absolute;
-  z-index: -3;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
@@ -257,7 +257,7 @@ header .header .container-person img {
   grid-template-areas: "header header header" "billing schedule cust-track";
   justify-content: center;
   gap: 2px;
-  row-gap: 50px;
+  row-gap: 0px;
 }
 .all-in-one .header {
   grid-area: header;
@@ -303,6 +303,118 @@ header .header .container-person img {
 }
 .all-in-one .cust-track {
   grid-area: cust-track;
+}
+
+.about-us {
+  display: grid;
+  margin-bottom: 10rem;
+  width: 100%;
+  grid-template-areas: "header header" "instructions students";
+  justify-content: center;
+  text-align: center;
+}
+.about-us .header {
+  grid-area: header;
+  padding: 5px 7rem;
+}
+.about-us .header h3 {
+  color: #2f327d;
+  font-size: 2.4em;
+  font-weight: 600;
+}
+.about-us .header h3 span {
+  color: #f48c06;
+}
+.about-us .header p {
+  color: #696984;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+.about-us .imgs {
+  position: relative;
+}
+.about-us .imgs .body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-us .imgs .body h4 {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 1.7em;
+}
+.about-us .imgs .body button {
+  font-size: 1.2;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 40px;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 0 10px;
+}
+.about-us .imgs .body button.instructions-btn {
+  background-color: transparent;
+  border: 1px solid white;
+}
+.about-us .imgs .body button.instructions-btn:hover {
+  background-color: #65daff;
+  border: none;
+}
+.about-us .imgs .body button.student-btn {
+  background-color: #65daff;
+}
+.about-us .imgs .body button.student-btn:hover {
+  background-color: #32ceff;
+}
+.about-us .instructions {
+  grid-area: instructions;
+}
+.about-us .for-student {
+  grid-area: students;
+}
+
+.skill {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+}
+.skill .text {
+  padding: 10px 30px 10px 80px;
+}
+.skill .text h3 {
+  color: #2f327d;
+  font-size: 2em;
+  font-weight: 500;
+}
+.skill .text h3 span {
+  color: #f48c06;
+}
+.skill .text p {
+  color: #696984;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 25px 0;
+}
+.skill .text a {
+  text-decoration: none;
+  color: #696984;
+}
+.skill .text a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 576px) {
