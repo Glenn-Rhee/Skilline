@@ -436,6 +436,7 @@ header {
 
   .imgs {
     position: relative;
+    margin-top: 5rem;
 
     .body {
       position: absolute;
@@ -450,6 +451,7 @@ header {
         color: white;
         text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.5);
         font-size: 1.7em;
+        text-transform: uppercase;
       }
 
       button {
@@ -517,14 +519,14 @@ header {
       }
     }
 
-    p{
+    p {
       color: #696984;
       font-size: 1.3em;
       font-weight: 400;
       margin: 25px 0;
     }
 
-    a{
+    a {
       text-decoration: none;
       color: #696984;
 
@@ -536,6 +538,98 @@ header {
 
   // padding: 10px 50px;
 }
+
+// Features
+.features {
+  margin-top: 10rem;
+
+  .heading {
+    text-align: center;
+
+    h3 {
+      font-size: 2em;
+      font-weight: 700;
+      color: $primary-colorBlue;
+
+      span {
+        color: $secondary-colorOrange;
+      }
+    }
+
+    p {
+      font-size: 1.3em;
+      font-weight: 400;
+      color: #696984;
+    }
+  }
+  main {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    justify-content: center;
+    align-items: center;
+
+    .main-img {
+      margin-left: 50px;
+      img {
+        width: 800px;
+      }
+    }
+
+    .main-text {
+      h4 {
+        font-size: 2.2em;
+        color: $primary-colorBlue;
+        font-weight: 600;
+
+        span {
+          color: $secondary-colorOrange;
+        }
+      }
+
+      .main-list {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        margin-left: -80px;
+        padding-right: 80px;
+
+        img {
+          margin-top: 5px;
+          width: 100px;
+          margin-left: 50px;
+        }
+
+        p {
+          font-size: 1.2em;
+          color: #696984;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.tools {
+  @include flexitems(center, center);
+  // background-color: salmon;
+  margin-top: 5rem;
+
+  .main-text {
+    h4 {
+      font-size: 2.2em;
+      color: $primary-colorBlue;
+      font-weight: 600;
+
+      span {
+        color: $secondary-colorOrange;
+      }
+    }
+  }
+}
+
+
+
 
 @media (max-width: 576px) {
   nav .logo {
