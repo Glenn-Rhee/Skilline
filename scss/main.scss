@@ -735,13 +735,13 @@ header {
   .button {
     text-align: center;
     margin-top: -150px;
-    .features{
-      @include templateBtn(200px);
+    .features {
+      @include templateBtn(fit-content);
       border-radius: 30px;
       height: 50px;
       cursor: pointer;
       transition: 0.3s;
-      padding: 0 10px;
+      padding: 10px 20px;
       background-color: transparent;
       border: 1px solid $secondary-colorOrange;
       color: $secondary-colorOrange;
@@ -750,7 +750,78 @@ header {
         background-color: $secondary-colorOrange;
         color: white;
       }
+    }
+  }
+}
 
+// Integrations
+.integrations {
+  width: 100%;
+  @include flexitems(center, center);
+  gap: 100px;
+  padding: 4px 40px;
+  font-family: "Nunito Sans", sans-serif;
+
+  .main-img {
+    margin-left: 7rem;
+  }
+
+  .main-text {
+    width: 100%;
+    padding-right: 10rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      color: #525596;
+      column-gap: 20px;
+
+      .garis {
+        width: 80px;
+        height: 1px;
+        background-color: #525596;
+      }
+    }
+
+    .body {
+      h4 {
+        font-size: 2.2em;
+        color: $primary-colorBlue;
+        font-weight: 600;
+        padding-right: 10rem;
+
+        span {
+          color: $secondary-colorOrange;
+        }
+      }
+
+      p {
+        margin-top: 2rem;
+        font-size: 1.2em;
+        color: #696984;
+        font-weight: 400;
+      }
+
+      .integrations {
+        margin-top: 20px;
+        @include templateBtn(fit-content);
+        color: $secondary-colorOrange;
+        border: 1px solid $secondary-colorOrange;
+        padding: 25px 30px;
+        border-radius: 40px;
+        font-size: 1.2;
+        font-weight: 400;
+        cursor: pointer;
+        transition: .4s;
+
+        &:hover{
+          background-color: $secondary-colorOrange;
+          color: white;
+        }
+      }
     }
   }
 }

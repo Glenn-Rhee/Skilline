@@ -594,7 +594,7 @@ header .header .container-person img {
   margin-top: -150px;
 }
 .one-on-one .button .features {
-  width: 200px;
+  width: fit-content;
   height: 40px;
   font-size: 1.1em;
   outline: none;
@@ -603,12 +603,78 @@ header .header .container-person img {
   height: 50px;
   cursor: pointer;
   transition: 0.3s;
-  padding: 0 10px;
+  padding: 10px 20px;
   background-color: transparent;
   border: 1px solid #f48c06;
   color: #f48c06;
 }
 .one-on-one .button .features:hover {
+  background-color: #f48c06;
+  color: white;
+}
+
+.integrations {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 4px 40px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.integrations .main-img {
+  margin-left: 7rem;
+}
+.integrations .main-text {
+  width: 100%;
+  padding-right: 10rem;
+}
+.integrations .main-text .title {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: #525596;
+  column-gap: 20px;
+}
+.integrations .main-text .title .garis {
+  width: 80px;
+  height: 1px;
+  background-color: #525596;
+}
+.integrations .main-text .body h4 {
+  font-size: 2.2em;
+  color: #2f327d;
+  font-weight: 600;
+  padding-right: 10rem;
+}
+.integrations .main-text .body h4 span {
+  color: #f48c06;
+}
+.integrations .main-text .body p {
+  margin-top: 2rem;
+  font-size: 1.2em;
+  color: #696984;
+  font-weight: 400;
+}
+.integrations .main-text .body .integrations {
+  margin-top: 20px;
+  width: fit-content;
+  height: 40px;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  color: #f48c06;
+  border: 1px solid #f48c06;
+  padding: 25px 30px;
+  border-radius: 40px;
+  font-size: 1.2;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.integrations .main-text .body .integrations:hover {
   background-color: #f48c06;
   color: white;
 }
