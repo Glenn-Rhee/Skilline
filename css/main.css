@@ -775,6 +775,119 @@ header .header .container-person img {
   width: 700px;
 }
 
+.news {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.news .heading {
+  text-align: center;
+  font-family: "Nunito sans", sans-serif;
+}
+.news .heading h3 {
+  font-size: 2em;
+  color: #2f327d;
+  font-weight: 700;
+}
+.news .heading p {
+  font-size: 1.3;
+  color: #696984;
+  font-weight: 400;
+}
+.news main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 2px 50px;
+}
+.news main .main {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+.news main .main button {
+  width: 130px;
+  height: 40px;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  background-color: #f4c467;
+  color: #252641;
+  border-radius: 80px;
+}
+.news main .main button:hover {
+  background-color: #f1b237;
+}
+.news main .main h4,
+.news main .main p {
+  padding-right: 100px;
+}
+.news main .main h4 {
+  color: #252641;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+.news main .main p,
+.news main .main a {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #696984;
+  text-decoration: none;
+}
+.news main .main a:hover {
+  text-decoration: underline;
+}
+.news main .main-text {
+  margin-right: 0px;
+  padding: 0 40px;
+}
+.news main .main-text .aside {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.news main .main-text .aside .main-img {
+  position: relative;
+}
+.news main .main-text .aside .main-img button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: fit-content;
+  height: 40px;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 80px;
+  background-color: #f4c467;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  color: #252641;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.news main .main-text .aside .main-img button:hover {
+  background-color: #f1b237;
+}
+.news main .main-text .aside .body-text {
+  margin-left: 30px;
+}
+.news main .main-text .aside .body-text h5 {
+  font-size: 1.2em;
+  color: #252641;
+  font-weight: 500;
+}
+.news main .main-text .aside .body-text p {
+  font-size: 1.1em;
+  color: #696984;
+  font-weight: 400;
+}
+
 @media (max-width: 576px) {
   nav .logo {
     font-size: 1.7em;
