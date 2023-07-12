@@ -13,3 +13,9 @@ menuToggle.addEventListener("click", function () {
         }, 500);
     }
 })
+
+
+const btnTesti = document.querySelector(".testi-button");
+btnTesti.addEventListener("click", function(){
+    btnTesti.classList.toggle("written");
+})

@@ -815,13 +815,119 @@ header {
         font-size: 1.2;
         font-weight: 400;
         cursor: pointer;
-        transition: .4s;
+        transition: 0.4s;
 
-        &:hover{
+        &:hover {
           background-color: $secondary-colorOrange;
           color: white;
         }
       }
+    }
+  }
+}
+
+// Testumonial
+.testi {
+  width: 100%;
+  @include flexitems(center, start);
+  gap: 100px;
+  padding: 4px 40px;
+  margin-top: 10rem;
+
+  .main-text {
+    width: 100%;
+    padding-right: 2rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 1.1em;
+      font-family: "Nunito Sans", sans-serif;
+      text-transform: uppercase;
+      color: #525596;
+      column-gap: 20px;
+
+      .garis {
+        width: 80px;
+        height: 1px;
+        background-color: #525596;
+      }
+    }
+
+    .body {
+      h4 {
+        font-size: 4.1em;
+        margin-bottom: 2rem;
+        color: $primary-colorBlue;
+        font-weight: 700;
+        font-family: "Nunito Sans", sans-serif;
+      }
+
+      p {
+        margin-top: 2rem;
+        font-size: 1.4em;
+        color: #696984;
+        font-weight: 400;
+      }
+
+      .testi-button {
+        margin-top: 2rem;
+        @include flexitems(space-between, center);
+        @include templateBtn(350px);
+        padding: 10px 0px;
+        border: 1px solid $secondary-colorOrange;
+        cursor: pointer;
+        border-radius: 40px;
+
+        button {
+          color: $secondary-colorOrange;
+          cursor: pointer;
+          font-size: 1.2em;
+          font-weight: 400;
+          color: $secondary-colorOrange;
+          border: 0;
+          outline: 0;
+          background-color: transparent;
+          transition: 1s;
+
+          &.text {
+            padding-left: 20px;
+          }
+
+          &.circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid $secondary-colorOrange;
+          }
+        }
+
+        &.written {
+          background-color: $secondary-colorOrange;
+
+          button {
+            &.text {
+              transform: translate(60px);
+              color: white;
+            }
+
+            &.circle {
+              transform: translateX(-291px);
+              color: $secondary-colorOrange;
+              border: 1px solid white;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-img {
+    padding-right: 50px;
+    img {
+      width: 700px;
     }
   }
 }
